@@ -29,3 +29,4 @@ The Blender3d has a built-in game engine BGE, which in turn uses the Bullet phys
 
 The buggy model is built as follows:
 * (F)ront and (B)ack end of the buggy are cube objects that are connected using a rigid body 6dof joint constraint with all axis and rotations fixed. In the future this allows some leeway in case chassis flex is modeled (allowing adjusting the flex in horizontal and vertical direction using Servo Actuators or python script applying torques and forces.
+* TBD...
