@@ -9,7 +9,7 @@ A work-in-progress open source simulator for radio-controlled off-road buggies. 
 * uinput
 * Arduino IDE
 
-However, pull requests to make it work on Windows are welcome. What would be required is to hack a Arduino joystick driver to work with the soon-to-be included Arduino RX-PC bridge.
+However, the game is entirely playable on Windows / OSX if Blender 2.71 is installed. Pull requests to make RC TX/RX to work on Windows are welcome. What would be required is to hack a Arduino joystick driver to work with the soon-to-be included Arduino RX-PC bridge.
 
 The Blender3d has a built-in game engine BGE, which in turn uses the Bullet physics engine. The RC buggy in this simulator is built using 6-degrees-of-freedom (6dof) rigid body joints and gravity, friction, collisions etc. are provided by the Bullet physics engine.
 
@@ -19,8 +19,11 @@ The Blender3d has a built-in game engine BGE, which in turn uses the Bullet phys
 # Feature highlights
 * A Bullet physics powered 3D RC buggy model
  * Friction for each wheel to all different directions x,y,z (via Anisotropic Friction)
- * Suspension with springs and shocks using rigid body 6dof joints with all but z-axis fixed. The min/max limits for z-axis can be used to adjust the down/uptravel of the shock.
- * Front and back ends are connected by 6rigid body joint
+ * Independent suspension with springs and shocks using rigid body 6dof joints with all but z-axis fixed. The min/max limits for z-axis can be used to adjust the down/uptravel of the shock (the python script for shock absorbers is working in another prototype and will be imported quite soon). It is possible to implement the effect of different shock positions to the progressivity of the suspension via this script. 
+ * The suspension allows tuning the geometry: caster, camber, toe and kickoff. The effect on the car can be simulated if the Physics engine does not support it directly.
+ * Front and back ends of the chassis are connected by 6rigid body joint. This allows simulation of chassis flex (not yet implemented).
+ * Center-of-gravity is modeled and can be tuned. 
+* Use your own RC transmitter as the game controller. The required adapter only costs an [euro and some cents](http://www.ebay.com/itm/USB-Nano-V3-0-ATmega328-16M-5V-Micro-controller-CH340G-board-For-Arduino-1PC-/381506734078), some wires and time to put it together.
 
 # Implementation notes
 
