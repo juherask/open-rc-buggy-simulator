@@ -1,4 +1,7 @@
 # open-rc-buggy-simulator
+
+![Simulated Buggy Jumps](https://github.com/juherask/open-rc-buggy-simulator/raw/master/images/jump.gif)
+
 A work-in-progress open source simulator for radio-controlled off-road buggies. It is built on a entirely open source stack:
 
 * Linux
@@ -9,6 +12,9 @@ A work-in-progress open source simulator for radio-controlled off-road buggies. 
 However, pull requests to make it work on Windows are welcome. What would be required is to hack a Arduino joystick driver to work with the soon-to-be included Arduino RX-PC bridge.
 
 The Blender3d has a built-in game engine BGE, which in turn uses the Bullet physics engine. The RC buggy in this simulator is built using 6-degrees-of-freedom (6dof) rigid body joints and gravity, friction, collisions etc. are provided by the Bullet physics engine.
+
+![The structure of the car model under the hood](https://raw.githubusercontent.com/juherask/open-rc-buggy-simulator/master/images/model.png)
+
 
 # Feature highlights
 * A Bullet physics powered 3D RC buggy model
