@@ -2,6 +2,7 @@
 
 ![Simulated Buggy Jumps](https://github.com/juherask/open-rc-buggy-simulator/raw/master/images/jump.gif)
 
+** NOTE: Developed on Blender 2.71. Use that specific version when developing this game. **
 A work-in-progress open source simulator for radio-controlled off-road buggies. It is built on a entirely open source stack:
 
 * Linux
