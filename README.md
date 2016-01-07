@@ -20,9 +20,9 @@ The Blender3d has a built-in game engine BGE, which in turn uses the Bullet phys
 # Media
 
 Below are links to recent work-in-progress videos of the simulator:
-* A video showing the initial physics model and some driving around using a gamepad : https://www.youtube.com/watch?v=wF3MJ9C0oMY
-* A video showing the Arduino RX-PC bridge to control a driving game :  https://www.youtube.com/watch?v=mtaJatJK2O8
-* A video showing a read RC controller / transmitter to drive around in the simulator : https://www.youtube.com/watch?v=y4D5b1MOF3k
+* [A video showing the initial physics model and some driving around using a gamepad (Youtube 2:32)](https://www.youtube.com/watch?v=wF3MJ9C0oMY)
+* [A video showing the Arduino RX-PC bridge to control a driving game  (Youtube 1:20)](https://www.youtube.com/watch?v=mtaJatJK2O8)
+* [A video showing a read RC controller / transmitter to drive around in the simulator (Youtube 0:44)](https://www.youtube.com/watch?v=y4D5b1MOF3k)
 
 # Feature highlights
 * A Bullet physics powered 3D RC buggy model
