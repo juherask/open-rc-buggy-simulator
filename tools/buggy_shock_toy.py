@@ -26,14 +26,22 @@ GRAB_DISC_RADIUS = 10
 SIZE = [640, 480]
 HINGE_POSITION = [SIZE[X]/4, SIZE[Y]/2]
 
-def plot_response(screen, rect, response_data, position, plot_line_color, title, min_y=None, max_y=None ):
+
+
+
+
+def plot_response(screen, rect, response_data, position, plot_line_color, title, font, min_y=None, max_y=None ):
     w = rect[2];
     h = rect[3];
     
     pygame.draw.rect(screen, WHITE, rect)
+
+    label = font.render(title, 1, (20,20,20))
+    screen.blit(label, (rect[0]+w/2-label.get_width()/2, rect[1]+3))
+    
     # axis
     pygame.draw.line(screen, BLACK,
-        [rect[0]+w/10, rect[1]+h/10],
+        [rect[0]+w/10, rect[1]+2*h/10],
         [rect[0]+w/10, rect[1]+9*h/10] )     
     pygame.draw.line(screen, BLACK,
         [rect[0]+w/10, rect[1]+9*h/10],
@@ -51,7 +59,7 @@ def plot_response(screen, rect, response_data, position, plot_line_color, title,
     range_x = max_x-min_x
     range_y = max_y-min_y
     range_w = 8*w/10
-    range_h = -8*h/10
+    range_h = -7*h/10
     start_x = rect[0]+w/10
     start_y = rect[1]+9*h/10
     
@@ -135,6 +143,7 @@ def draw_shock(screen, from_pos, to_pos, nbr_coils):
  
 def main():
     pygame.init()
+    monospace_font = pygame.font.SysFont("monospace", 10)
     screen = pygame.display.set_mode(SIZE)
     pygame.display.set_caption('RC buggy shock geometry toy')
     
@@ -230,10 +239,11 @@ def main():
         suspension_y_position = HINGE_POSITION[Y]-wheel_position[Y]
         plot_response( screen, [0,0,100,100], #where
                       spring_response, suspension_y_position, #what
-                      RED, "Spring response" ) # and how
+                      RED, "Spring force", monospace_font) # and how
         plot_response( screen, [0,110,100,100], #where
                       dampener_response, suspension_y_position, #what
-                      RED, "Spring response", min_y=0.0, max_y=SIZE[Y]/125.0 ) # and how
+                      RED, "Damping effect", monospace_font,
+                      min_y=0.0, max_y=SIZE[Y]/125.0 ) # and how
         
         # display what’s drawn. this might change.
         pygame.display.update()
