@@ -245,7 +245,7 @@ def main():
                       RED, "Damping effect", monospace_font,
                       min_y=0.0, max_y=SIZE[Y]/125.0 ) # and how
         
-        # display what’s drawn. this might change.
+        # display whats drawn. this might change.
         pygame.display.update()
         # run at 20 fps
         clock.tick(20)
